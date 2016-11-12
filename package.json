@@ -1,7 +1,7 @@
 {
-  "name": "ember-salesforce-adapter-test-project",
+  "name": "emberSalesforceAdapterTestProject",
   "version": "0.0.0",
-  "description": "Small description for ember-salesforce-adapter-test-project goes here",
+  "description": "Small description for emberSalesforceAdapterTestProject goes here",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -20,7 +20,11 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
+    "broccoli-concat": "^3.0.5",
+    "broccoli-export-tree": "^0.3.2",
     "broccoli-funnel": "^1.0.9",
+    "broccoli-stew": "^1.4.0",
+    "broccoli-zip": "^1.0.0",
     "ember-ajax": "^2.4.1",
     "ember-browserify": "^1.1.13",
     "ember-cli": "2.9.1",

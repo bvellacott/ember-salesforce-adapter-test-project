@@ -1,12 +1,14 @@
 /* jshint node: true */
 
+var pkgJson = require('../package.json');
+
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-salesforce-adapter-test-project',
-    podModulePrefix: 'ember-salesforce-adapter-test-project/pods',
+    modulePrefix: pkgJson.name,
+    podModulePrefix: pkgJson.name + '/pods',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

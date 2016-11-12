@@ -1,15 +1,19 @@
 ---
 language: node_js
 node_js:
+  - "0.12"
   - "4"
+  - "5"
 
-sudo: false
+sudo: required
+dist: trusty  
 
 cache:
   directories:
     - node_modules
 
 before_install:
+  - sudo apt-get install zip
   - npm config set spin false
   - npm install -g bower
   - bower --version
