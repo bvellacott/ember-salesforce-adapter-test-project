@@ -7,7 +7,7 @@ module.exports = function(environment) {
     modulePrefix: pkgJson.name,
     podModulePrefix: pkgJson.name + '/pods',
     environment: environment,
-    rootURL: '/',
+    rootURL: null,
     locationType: 'hash',
     EmberENV: {
       FEATURES: {

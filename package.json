@@ -1,7 +1,7 @@
 {
-  "name": "emberSalesforceAdapterTestProject",
+  "name": "EmberSalesforceAdapterTestProject",
   "version": "0.0.0",
-  "description": "Small description for emberSalesforceAdapterTestProject goes here",
+  "description": "Small description for EmberSalesforceAdapterTestProject goes here",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -21,6 +21,7 @@
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "broccoli-concat": "^3.0.5",
+    "broccoli-ember-inline-template-compiler": "0.0.1",
     "broccoli-export-tree": "^0.3.2",
     "broccoli-funnel": "^1.0.9",
     "broccoli-stew": "^1.4.0",
@@ -34,6 +35,7 @@
     "ember-cli-htmlbars": "^1.0.10",
     "ember-cli-htmlbars-inline-precompile": "^0.3.3",
     "ember-cli-inject-live-reload": "^1.4.1",
+    "ember-cli-inline-content": "^0.4.1",
     "ember-cli-jshint": "^1.0.4",
     "ember-cli-qunit": "^3.0.1",
     "ember-cli-release": "^0.2.9",

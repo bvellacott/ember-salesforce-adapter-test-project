@@ -1,3 +1,4 @@
+<apex:page sidebar="false" showHeader="false" docType="html-5.0">
 <html>
   <head>
     <meta charset="utf-8"></meta>
@@ -7,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 
     {{content-for "head"}}
-
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css"></link>
-    <link rel="stylesheet" href="{{rootURL}}assets/ember-salesforce-adapter-test-project.css"></link>
+    <link rel="stylesheet" href="{!URLFOR($Resource.EmberSalesforceAdapterTestProject)}/assets/vendor.css"></link>
+    <link rel="stylesheet" href="{!URLFOR($Resource.EmberSalesforceAdapterTestProject)}/assets/EmberSalesforceAdapterTestProject.css"></link>
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/ember-salesforce-adapter-test-project.js"></script>
+    <script src="{!URLFOR($Resource.EmberSalesforceAdapterTestProject)}/assets/vendor.js"></script>
+    <script src="{!URLFOR($Resource.EmberSalesforceAdapterTestProject)}/assets/EmberSalesforceAdapterTestProject.js"></script>
 
     {{content-for "body-footer"}}
   </body>
 </html>
+</apex:page>
