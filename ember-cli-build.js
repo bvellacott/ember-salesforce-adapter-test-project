@@ -7,6 +7,7 @@ var exportTree = require('broccoli-export-tree');
 var zipTree = require('broccoli-zip');
 var rename = require('broccoli-stew').rename;
 var concat = require('broccoli-concat');
+var deploy = require('broccoli-salesforce-deploy');
 
 var pkgJson = require('./package.json');
 
@@ -42,8 +43,22 @@ module.exports = function(defaults) {
   // var pageMeta = pickFiles('./app', { include: ['page-meta.xml'], destDir: 'pages' })
   // pageMeta = rename(pageMeta, 'page-meta.xml', pkgJson.name + '.page-meta.xml');
 
-  var statickresource = zipTree(appTree, pkgJson.name);
-  statickresource = rename(statickresource, pkgJson.name + '.zip', pkgJson.name + '.resource');
+  var staticresource = zipTree(appTree, pkgJson.name);
+  staticresource = deploy(staticresource, {
+    file: pkgJson.name + '.zip',
+    username: 'bvellacott@yahoo.com',
+    password: 'London2016',
+    securityToken: 'IMuTdOkCa6DVTEteh1MZd9gd',
+    name: 'tryThis'
+  });
+  staticresource = deploy(staticresource, {
+    file: pkgJson.name + '.zip',
+    // username: 'bvellacott@yahoo.com',
+    // password: 'London2016',
+    // securityToken: 'IMuTdOkCa6DVTEteh1MZd9gd',
+    name: 'tryThis2'
+  });
+  // statickresource = rename(statickresource, pkgJson.name + '.zip', pkgJson.name + '.resource');
   // statickresource = pickFiles(statickresource, { include: [pkgJson.name + '.resource'], destDir: 'staticresources' });
   // var staticresourceMeta = pickFiles('./app', { include: ['resource-meta.xml'], destDir: 'staticresources' })
   // staticresourceMeta = rename(staticresourceMeta, 'resource-meta.xml', pkgJson.name + '.resource-meta.xml');
@@ -67,6 +82,6 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
    
-  return mergeTrees([appTree, /*localPage,*/ statickresource]/*, { overwrite: true }*/);
+  return mergeTrees([appTree, /*localPage,*/ staticresource]/*, { overwrite: true }*/);
   // return app.toTree();
 };
