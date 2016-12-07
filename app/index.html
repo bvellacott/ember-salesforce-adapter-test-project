@@ -16,6 +16,15 @@
   <body>
     {{content-for "body"}}
 
+    <!-- request the salesforce soap javascript dependency     -->
+    <script src="/soap/ajax/33.0/connection.js"></script>
+    <!-- set the session id - if you leave this line out, sometimes you might get a session error -->
+    <script>
+      sforce.connection.sessionId = "{!$Api.Session_ID}";
+      // Get the user info like id, name etc..
+      var UserInfo = sforce.connection.getUserInfo();
+    </script>
+
     <script src="{!URLFOR($Resource.EmberSalesforceAdapterTestProject)}/assets/vendor.js"></script>
     <script src="{!URLFOR($Resource.EmberSalesforceAdapterTestProject)}/assets/EmberSalesforceAdapterTestProject.js"></script>
 

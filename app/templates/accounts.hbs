@@ -1,0 +1,15 @@
+<div class='so-list-view'>
+	<aside>
+	<menu>
+		<button {{action 'add'}} class='act'>add</button>
+	</menu>
+	<ul>
+		{{#each account in model}}
+		<li>{{#link-to "account" account}}<span class='so-name'>{{account.Name}}</span><small class='mute-info'>owner : {{account.CreatedById.Name}}</small>{{/link-to}}</li>
+		{{/each}}
+	</ul>
+	</aside>
+	<aside>
+	{{outlet}} 
+	</aside>
+</div>
