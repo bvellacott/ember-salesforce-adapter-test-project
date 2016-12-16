@@ -1,11 +1,11 @@
 <article>
 {{#if isEditing}}
-{{partial 'account/edit'}}
+{{partial 'accounts/account/edit'}}
 <button {{action 'save' this}} class='act'>ok</button>
 <button {{action 'cancel' this}} class='act'>cancel</button>
 <button {{action 'del' this}} class='act'>del</button>
 {{else}}
-{{partial 'account/view'}}
+{{partial 'accounts/account/view'}}
 <button {{action 'edit'}} class='act'>edit</button>
 {{/if}}
 </article>
